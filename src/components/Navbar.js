@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Flex, Circle, Text, HStack } from '@chakra-ui/react';
 import { FaPhoneAlt, FaShapes } from 'react-icons/fa';
 import Scrollspy from 'react-scrollspy';
 
 export default function Navbar() {
+  const [hide, setHide] = useState('section-1');
+
+  const hideUl = () => {
+    var scroll = document.documentElement.scrollTop;
+    if (scroll < window.innerHeight + 500) {
+      setHide('');
+    } else {
+      setHide('section-1');
+    }
+  };
+  window.onscroll = function () {
+    hideUl();
+  };
   return (
     <Flex
+      id={hide}
       className="ol"
       bg="white"
-      id="section-1"
       position="fixed"
       zIndex="2"
       sx={{
@@ -17,20 +30,22 @@ export default function Navbar() {
       }}
       align="center"
     >
-      <HStack>
+      <HStack mr={100}>
         <FaShapes size={20} />
-        <Text>Fedpoffa</Text>
+        <Text fontSize={20} fontFamily="Poppins, sans-serif" fontWeight="500">
+          Fedpoffa
+        </Text>
       </HStack>
 
       <Scrollspy
-        items={['section-1', 'section-2', 'section-3']}
+        items={['section-1', 'about', 'section-3']}
         currentClassName="is-current"
       >
         <li>
           <a href="#section-1">Home</a>
         </li>
         <li>
-          <a href="#section-2">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
           <a href="#section-3">Our Teachers</a>
@@ -45,7 +60,7 @@ export default function Navbar() {
           <a href="#section-3">Contact</a>
         </li>
       </Scrollspy>
-      <HStack>
+      <HStack ml={100}>
         <Circle size="30px" bg="rgb(41, 202, 142)" color="white">
           <FaPhoneAlt />
         </Circle>
