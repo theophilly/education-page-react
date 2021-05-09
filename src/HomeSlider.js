@@ -74,7 +74,7 @@ export default function HomeSlider() {
               </Text>
               <button variant="outline">Discover More</button>
             </Box>
-            <img src="/images/slider-image1.jpg" alt="The Last of us" />
+            <img src="/images/slider-image3.jpg" alt="The Last of us" />
           </div>
           <div className="item" id="box2">
             <Box
@@ -90,6 +90,7 @@ export default function HomeSlider() {
                 mb="15px"
                 lineHeight="50px"
                 as="h1"
+                fontFamily="Poppins, sans-serif"
               >
                 Start your journey with our practical courses
               </Heading>
@@ -124,7 +125,7 @@ export default function HomeSlider() {
               </Text>
               <button variant="outline">Let's chat</button>
             </Box>
-            <img src="/images/slider-image3.jpg" alt="Mirror Edge" />
+            <img src="/images/slider-image1.jpg" alt="Mirror Edge" />
           </div>
         </OwlCarousel>
       </Box>
