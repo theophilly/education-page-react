@@ -24,6 +24,7 @@ ul li a {
   color: #0000ee;
 }
 ul li {
+  transition: all 0.3s ease-in-out;
   padding: 28px 20px;
 }
 ul li:hover {
@@ -86,4 +87,20 @@ input {
 input:active,
 input:focus {
   border: none !important;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.icon:hover {
+  background: #29ca8e;
+
+  color: white;
 }

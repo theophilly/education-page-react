@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HomeSlider from './HomeSlider';
 import { Box, Circle, Center } from '@chakra-ui/react';
 import About from './components/About';
+import Teachers from './components/Teachers';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Navbar></Navbar>
       <HomeSlider></HomeSlider>
       <About></About>
+      <Teachers />
     </Box>
   );
 }
