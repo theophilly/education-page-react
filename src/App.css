@@ -4,6 +4,7 @@
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Poppins', sans-serif;
    font-family: 'Roboto', sans-serif;
+   font-family: 'Mulish', sans-serif;
    font-family: 'Inter', sans-serif; */
 }
 .ol {
@@ -79,13 +80,15 @@ hr {
   background-color: #3f51b5;
   margin-top: 5px;
 }
-input {
+input,
+textarea {
   padding: 20px;
   border: none;
   border-bottom: 1px solid grey;
 }
 input:active,
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -132,4 +135,30 @@ input:focus {
 }
 .cicon:hover {
   background: #869791;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input:nth-child(1),
+form input:nth-child(2) {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+form textarea:nth-child(3) {
+  border-radius: 5px;
+
+  padding: 15px;
+  height: 80px;
+}
+form button:nth-child(4) {
+  border-radius: 5px;
+  padding: 15px 25px;
+  background: white;
+  color: black;
+  width: 200px;
+  margin-top: 20px;
+  cursor: pointer;
 }
