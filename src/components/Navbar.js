@@ -38,7 +38,14 @@ export default function Navbar() {
       </HStack>
 
       <Scrollspy
-        items={['section-1', 'about', 'teacher', 'courses', 'reviews']}
+        items={[
+          'section-1',
+          'about',
+          'teacher',
+          'courses',
+          'reviews',
+          'contact',
+        ]}
         currentClassName="is-current"
       >
         <li>
@@ -57,7 +64,7 @@ export default function Navbar() {
           <a href="#reviews">Reviews</a>
         </li>
         <li>
-          <a href="#section-3">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </Scrollspy>
       <HStack ml={100}>

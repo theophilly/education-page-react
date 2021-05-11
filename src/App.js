@@ -5,6 +5,8 @@ import { Box, Circle, Center } from '@chakra-ui/react';
 import About from './components/About';
 import Teachers from './components/Teachers';
 import Courses from './components/Courses';
+import Reviews from './components/Reviews';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
       <About></About>
       <Teachers />
       <Courses />
+      <Reviews />
+      <Contact />
     </Box>
   );
 }

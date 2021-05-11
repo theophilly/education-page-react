@@ -78,7 +78,7 @@ export default function Courses() {
     price,
   }) => {
     return (
-      <Flex direction="column">
+      <Flex mb="20px" direction="column">
         <Box
           pos="relative"
           w="330px"
@@ -195,8 +195,8 @@ export default function Courses() {
             autoPlay={true}
             nav={true}
             navText={[
-              '<i class="fa fa-angle-left"></i>',
-              '<i class="fa fa-angle-right"></i>',
+              '<i class="fa fa-angle-left cicon"></i>',
+              '<i class="fa fa-angle-right cicon"></i>',
             ]}
             responsive={{
               0: {
