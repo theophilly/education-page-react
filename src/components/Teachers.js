@@ -1,20 +1,11 @@
 import React from 'react';
-import {
-  Box,
-  Flex,
-  Circle,
-  Text,
-  HStack,
-  Image,
-  Heading,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, Text, Image, Heading, VStack } from '@chakra-ui/react';
 
 export default function Teachers() {
   const Single = ({ icons = [], name, sub, path }) => {
     return (
       <Flex direction="column">
-        <Box width="230px" w="260px">
+        <Box w="260px">
           <Image w="100%" h="auto" objectFit="contain" src={`${path}`}></Image>
         </Box>
         <Flex mt="-5px" w="260px" direction="column" h="150px" bg="white">
@@ -52,7 +43,9 @@ export default function Teachers() {
   return (
     <Box id="teacher" minH="110vh" bg="#f9f9f9">
       <VStack justifyContent="center" h="30vh">
-        <Heading color="#353535">Teachers</Heading>
+        <Heading color="#353535" as="h2" fontSize="1.7em">
+          Teachers
+        </Heading>
         <Text>Meet Professional Trainers</Text>
       </VStack>
       <Flex wrap="wrap" gridGap="30px" justify="center">

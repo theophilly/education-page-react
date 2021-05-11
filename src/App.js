@@ -4,6 +4,7 @@ import HomeSlider from './HomeSlider';
 import { Box, Circle, Center } from '@chakra-ui/react';
 import About from './components/About';
 import Teachers from './components/Teachers';
+import Courses from './components/Courses';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <HomeSlider></HomeSlider>
       <About></About>
       <Teachers />
+      <Courses />
     </Box>
   );
 }

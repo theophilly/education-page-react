@@ -86,7 +86,7 @@ input {
 }
 input:active,
 input:focus {
-  border: none !important;
+  outline: none;
 }
 
 .icon {
@@ -101,6 +101,16 @@ input:focus {
 }
 .icon:hover {
   background: #29ca8e;
-
   color: white;
+}
+
+.cimage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.cimage2 {
+  border-radius: 50%;
+  margin-right: 10px;
 }
