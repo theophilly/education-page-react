@@ -33,14 +33,14 @@ ul li:hover {
   padding: 28px 20px;
   background: rgb(41, 202, 142);
 }
-ul li:hover a {
+ul li:hover {
   color: white;
 }
 
 .is-current {
   background: rgb(41, 202, 142);
 }
-.is-current a {
+.is-current {
   color: white;
 }
 [id*='box']::before {

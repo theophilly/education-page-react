@@ -9,8 +9,9 @@ export default function HomeSlider() {
     return (
       <Box
         padding="70px 30px"
-        width="300px"
-        h="auto"
+        maxW="300px"
+        w="auto"
+        h="180px"
         border="1px solid #f0f0f0"
         borderRadius="5px"
       >
@@ -35,7 +36,16 @@ export default function HomeSlider() {
 
   return (
     <Box>
-      <Box paddingTop={92} h="auto" overflow="hidden">
+      <Box
+        sx={{
+          '@media screen and (max-width : 750px)': {
+            paddingTop: '60px',
+          },
+        }}
+        paddingTop={92}
+        h="auto"
+        overflow="hidden"
+      >
         <OwlCarousel
           autoplayHoverPause={false}
           animateOut="fadeOut"

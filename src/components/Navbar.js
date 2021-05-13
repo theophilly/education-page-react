@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Flex, Circle, Text, HStack } from '@chakra-ui/react';
 import { FaPhoneAlt, FaShapes } from 'react-icons/fa';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import Scrollspy from 'react-scrollspy';
 
 export default function Navbar() {
   const [hide, setHide] = useState('section-1');
+  const myRef = useRef();
+
+  const handleClick = () => {
+    myRef.current.checked = false;
+    scroll.scrollToTop();
+  };
 
   const hideUl = () => {
     var scroll = document.documentElement.scrollTop;
@@ -23,6 +30,7 @@ export default function Navbar() {
       className="ol"
       bg="white"
       position="fixed"
+      border="1px solid red"
       zIndex="2"
       height="74px"
       sx={{
@@ -44,7 +52,7 @@ export default function Navbar() {
           Fedpoffa
         </Text>
       </HStack>
-      <input className="navMenu" type="checkbox" id="menu" />
+      <input ref={myRef} className="navMenu" type="checkbox" id="menu" />
       <label for="menu" id="nav-icon">
         <i class="fas fa-bars menu"></i>
       </label>
@@ -60,24 +68,54 @@ export default function Navbar() {
         ]}
         currentClassName="is-current"
       >
-        <li>
-          <a href="#section-1">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#teacher">Teachers</a>
-        </li>
-        <li>
-          <a href="#courses">Courses</a>
-        </li>
-        <li>
-          <a href="#reviews">Reviews</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <Link
+          onClick={() => handleClick()}
+          to="section-1"
+          duration={2000}
+          smooth={true}
+        >
+          <li>Home</li>
+        </Link>
+        <Link
+          onClick={() => (myRef.current.checked = false)}
+          to="about"
+          duration={2000}
+          smooth={true}
+        >
+          <li>About</li>
+        </Link>
+        <Link
+          onClick={() => (myRef.current.checked = false)}
+          to="teacher"
+          duration={2000}
+          smooth={true}
+        >
+          <li>Teacher</li>
+        </Link>
+        <Link
+          onClick={() => (myRef.current.checked = false)}
+          to="courses"
+          duration={2000}
+          smooth={true}
+        >
+          <li>Courses</li>
+        </Link>
+        <Link
+          onClick={() => (myRef.current.checked = false)}
+          to="reviews"
+          duration={2000}
+          smooth={true}
+        >
+          <li>Reviews</li>
+        </Link>
+        <Link
+          onClick={() => (myRef.current.checked = false)}
+          to="contact"
+          duration={2000}
+          smooth={true}
+        >
+          <li>Contact</li>
+        </Link>
       </Scrollspy>
       <HStack
         sx={{
