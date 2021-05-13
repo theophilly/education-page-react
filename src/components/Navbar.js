@@ -24,9 +24,15 @@ export default function Navbar() {
       bg="white"
       position="fixed"
       zIndex="2"
+      height="74px"
       sx={{
         borderTop: '5px solid rgb(41, 202, 142)',
         borderBottom: '20px solid white',
+        '@media screen and (max-width : 750px)': {
+          justifyContent: 'space-around',
+          paddingLeft: '0px',
+          paddingRight: '0px',
+        },
       }}
       align="center"
     >
@@ -36,6 +42,10 @@ export default function Navbar() {
           Fedpoffa
         </Text>
       </HStack>
+      <input className="navMenu" type="checkbox" id="menu" />
+      <label for="menu" id="nav-icon">
+        <i class="fas fa-bars menu"></i>
+      </label>
 
       <Scrollspy
         items={[
@@ -67,7 +77,15 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
         </li>
       </Scrollspy>
-      <HStack ml={100}>
+      <HStack
+        sx={{
+          '@media screen and (max-width : 750px)': {
+            display: 'none',
+          },
+        }}
+        className="phone"
+        ml={100}
+      >
         <Circle size="30px" bg="rgb(41, 202, 142)" color="white">
           <FaPhoneAlt />
         </Circle>

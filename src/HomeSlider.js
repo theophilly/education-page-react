@@ -134,7 +134,8 @@ export default function HomeSlider() {
         gridGap="30px"
         justify="center"
         pt="100px"
-        height="80vh"
+        height="auto"
+        minH="80vh"
       >
         {[
           {

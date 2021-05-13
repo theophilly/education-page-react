@@ -11,7 +11,7 @@ import {
 
 export default function Contact() {
   return (
-    <Box d="flex" minH="85vh" bg="#3f51b5">
+    <Box flexWrap="wrap" d="flex" id="contact" minH="85vh" bg="#3f51b5">
       <Box
         fontFamily="Poppins, sans-serif"
         p="100px 100px 0px"

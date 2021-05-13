@@ -46,7 +46,7 @@ export default function Reviews() {
     );
   };
   return (
-    <Box id="reviews" h="100vh" bg="#f9f9f9">
+    <Box padding="50px 100px 100px" id="reviews" h="100vh" bg="#f9f9f9">
       <VStack h="30vh" justifyContent="center">
         <Heading color="#353535" as="h2" fontSize="1.7em">
           Student Reviews

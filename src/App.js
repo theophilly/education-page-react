@@ -7,17 +7,19 @@ import Teachers from './components/Teachers';
 import Courses from './components/Courses';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
     <Box>
       <Navbar></Navbar>
       <HomeSlider></HomeSlider>
-      <About></About>
+      {/* <About></About> */}
       <Teachers />
       <Courses />
       <Reviews />
       <Contact />
+      <Footer />
     </Box>
   );
 }
