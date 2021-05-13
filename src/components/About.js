@@ -80,7 +80,7 @@ export default function About() {
             p: '0px',
           },
         }}
-        padding="80px 180px 80px"
+        padding="50px 180px 80px"
         flex="0.5"
       >
         <Box padding="20px" border="1px solid grey">
@@ -91,9 +91,10 @@ export default function About() {
           <Box mt="20" flexDir="column" display="flex">
             <input placeholder="First name" />
 
-            <input placeholder="First name" />
+            <input placeholder="Last name" />
 
-            <input placeholder="First name" />
+            <input type="email" placeholder="Email" />
+            <button className="signUp">Sign Up</button>
           </Box>
         </Box>
       </Box>

@@ -10,7 +10,7 @@ export default function HomeSlider() {
       <Box
         padding="70px 30px"
         width="300px"
-        height="170px"
+        h="auto"
         border="1px solid #f0f0f0"
         borderRadius="5px"
       >
@@ -35,18 +35,14 @@ export default function HomeSlider() {
 
   return (
     <Box>
-      <Box
-        paddingTop={90}
-        height="calc(100vh - 90px)"
-        maxW="100vw"
-        overflow="hidden"
-      >
+      <Box paddingTop={92} h="auto" overflow="hidden">
         <OwlCarousel
           autoplayHoverPause={false}
           animateOut="fadeOut"
           loop={true}
           style={{ color: 'white' }}
           items={1}
+          dots={false}
           smartSpeed={1000}
           autoPlay={true}
           className="owl-carousel owl-theme"
@@ -54,16 +50,22 @@ export default function HomeSlider() {
           <div className="item" id="box1">
             <Box
               width="40%"
+              sx={{
+                '@media screen and (max-width : 800px)': {
+                  w: '80%',
+                  left: '50',
+                },
+              }}
               position="absolute"
               top="20%"
               left="120"
               zIndex="5"
             >
               <Heading
-                fontSize="2.4rem"
+                fontSize="clamp(16px, 5vw, 40px)"
                 fontWeight="bold"
                 mb="15px"
-                lineHeight="50px"
+                lineHeight={{ 'base': '30px', 'md': '50px' }}
                 as="h1"
               >
                 Distant Learning <br /> Education Center
@@ -74,18 +76,28 @@ export default function HomeSlider() {
               </Text>
               <button variant="outline">Discover More</button>
             </Box>
-            <img src="/images/slider-image3.jpg" alt="The Last of us" />
+            <img
+              className="sliderImage"
+              src="/images/slider-image3.jpg"
+              alt="The Last of us"
+            />
           </div>
           <div className="item" id="box2">
             <Box
               width="40%"
               position="absolute"
+              sx={{
+                '@media screen and (max-width : 800px)': {
+                  w: '80%',
+                  left: '50',
+                },
+              }}
               top="20%"
               left="120"
               zIndex="5"
             >
               <Heading
-                fontSize="2.4rem"
+                fontSize="clamp(16px, 5vw, 40px)"
                 fontWeight="bold"
                 mb="15px"
                 lineHeight="50px"
@@ -100,18 +112,28 @@ export default function HomeSlider() {
               </Text>
               <button variant="outline">Take a course</button>
             </Box>
-            <img src="/images/slider-image2.jpg" alt="GTA V" />
+            <img
+              className="sliderImage"
+              src="/images/slider-image2.jpg"
+              alt="GTA V"
+            />
           </div>
           <div className="item" id="box3">
             <Box
               width="40%"
               position="absolute"
               top="20%"
+              sx={{
+                '@media screen and (max-width : 800px)': {
+                  w: '80%',
+                  left: '50',
+                },
+              }}
               left="120"
               zIndex="5"
             >
               <Heading
-                fontSize="2.4rem"
+                fontSize="clamp(16px, 5vw, 40px)"
                 fontWeight="bold"
                 mb="15px"
                 lineHeight="50px"
@@ -125,7 +147,11 @@ export default function HomeSlider() {
               </Text>
               <button variant="outline">Let's chat</button>
             </Box>
-            <img src="/images/slider-image1.jpg" alt="Mirror Edge" />
+            <img
+              className="sliderImage"
+              src="/images/slider-image1.jpg"
+              alt="Mirror Edge"
+            />
           </div>
         </OwlCarousel>
       </Box>

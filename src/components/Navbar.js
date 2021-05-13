@@ -32,11 +32,13 @@ export default function Navbar() {
           justifyContent: 'space-around',
           paddingLeft: '0px',
           paddingRight: '0px',
+          height: '60px',
+          borderBottom: '0px solid white',
         },
       }}
       align="center"
     >
-      <HStack mr={100}>
+      <HStack>
         <FaShapes size={20} />
         <Text fontSize={20} fontFamily="Poppins, sans-serif" fontWeight="500">
           Fedpoffa
@@ -65,7 +67,7 @@ export default function Navbar() {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#teacher">Our Teachers</a>
+          <a href="#teacher">Teachers</a>
         </li>
         <li>
           <a href="#courses">Courses</a>
@@ -79,12 +81,11 @@ export default function Navbar() {
       </Scrollspy>
       <HStack
         sx={{
-          '@media screen and (max-width : 750px)': {
+          '@media screen and (max-width : 900px)': {
             display: 'none',
           },
         }}
         className="phone"
-        ml={100}
       >
         <Circle size="30px" bg="rgb(41, 202, 142)" color="white">
           <FaPhoneAlt />
