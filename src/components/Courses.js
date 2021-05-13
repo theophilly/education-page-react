@@ -78,16 +78,17 @@ export default function Courses() {
     price,
   }) => {
     return (
-      <Flex mb="20px" direction="column">
-        <Box
-          pos="relative"
-          w="330px"
-          sx={{
-            '@media screen and (max-width : 1000px)': {
-              width: '500px',
-            },
-          }}
-        >
+      <Flex
+        sx={{
+          '@media screen and (max-width : 1000px)': {
+            mr: '0px',
+          },
+        }}
+        mr="15px"
+        mb="20px"
+        direction="column"
+      >
+        <Box pos="relative" minW="330px" width="auto">
           <img className="cimage" src={`${image}`}></img>
           <Flex
             color="white"
@@ -109,12 +110,8 @@ export default function Courses() {
           </Flex>
         </Box>
         <Flex
-          w="330px"
-          sx={{
-            '@media screen and (max-width : 1000px)': {
-              width: '500px',
-            },
-          }}
+          minw="330px"
+          width="auto"
           direction="column"
           h="170px"
           bg="#f9f9f9"
@@ -158,6 +155,7 @@ export default function Courses() {
               borderRadius="3px"
               fontWeight="500"
               padding="6px 10px"
+              mr="10px"
               bg={price === 'Free' ? '#3f51b5' : 'rgb(41, 202, 142)'}
               fontSize="0.9rem"
             >
@@ -169,7 +167,17 @@ export default function Courses() {
     );
   };
   return (
-    <Box id="courses" minH="115vh" bg="white">
+    <Box
+      id="courses"
+      sx={{
+        '@media screen and (max-width : 1000px)': {
+          pb: '50px',
+        },
+      }}
+      height="auto"
+      minH="115vh"
+      bg="white"
+    >
       <VStack justifyContent="center" h="30vh">
         <Heading color="#353535" as="h2" fontSize="1.7em">
           Popular Courses
@@ -182,7 +190,7 @@ export default function Courses() {
           width="80%"
           sx={{
             '@media screen and (max-width : 1000px)': {
-              width: '500px',
+              width: '300px',
             },
           }}
         >

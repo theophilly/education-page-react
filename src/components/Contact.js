@@ -11,8 +11,24 @@ import {
 
 export default function Contact() {
   return (
-    <Box flexWrap="wrap" d="flex" id="contact" minH="85vh" bg="#3f51b5">
+    <Box
+      sx={{
+        '@media screen and (max-width: 800px)': {
+          flexDir: 'column',
+        },
+      }}
+      d="flex"
+      id="contact"
+      minH="85vh"
+      bg="#3f51b5"
+    >
       <Box
+        sx={{
+          '@media screen and (max-width: 800px)': {
+            p: '20px 20px',
+            width: 'calc(100% - 40px)',
+          },
+        }}
         fontFamily="Poppins, sans-serif"
         p="100px 100px 0px"
         w="calc(50% - 200px)"
@@ -32,7 +48,14 @@ export default function Contact() {
           <button onClick={(e) => e.preventDefault()}>Send Message</button>
         </form>
       </Box>
-      <Box w="50%">
+      <Box
+        sx={{
+          '@media screen and (max-width: 800px)': {
+            display: 'none',
+          },
+        }}
+        w="50%"
+      >
         <Image h="100%" w="100%" src="images/contact-image copy.jpg"></Image>
       </Box>
     </Box>

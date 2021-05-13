@@ -41,7 +41,7 @@ export default function Teachers() {
     );
   };
   return (
-    <Box id="teacher" minH="110vh" bg="#f9f9f9">
+    <Box pb="30px" id="teacher" minH="110vh" bg="#f9f9f9">
       <VStack justifyContent="center" h="30vh">
         <Heading color="#353535" as="h2" fontSize="1.7em">
           Teachers

@@ -14,10 +14,8 @@ export default function Footer() {
     <Box
       sx={{
         '@media screen and (max-width: 800px)': {
-          padding: '10px',
-          flexDir: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
+          padding: '20px',
+          flexDir: 'column-reverse',
         },
       }}
       flexWrap="wrap"
@@ -26,8 +24,16 @@ export default function Footer() {
       minH="30vh"
       bg="#252020"
     >
-      <Box flex="0.33">
+      <Box
+        sx={{
+          '@media screen and (max-width: 800px)': {
+            marginTop: '40px',
+          },
+        }}
+        flex="0.33"
+      >
         <Heading
+          width="100%"
           as="h2"
           color="white"
           fontSize="1.3rem"
@@ -39,8 +45,24 @@ export default function Footer() {
           07069507640 <br />
           ***** a **** **** 12000
         </Text>
-        <Box mt="2rem">
-          <Flex align="center" mt="1.5rem" gridGap="12px">
+        <Box
+          sx={{
+            '@media screen and (max-width: 800px)': {
+              marginTop: '0px',
+            },
+          }}
+          mt="2rem"
+        >
+          <Flex
+            align="center"
+            sx={{
+              '@media screen and (max-width: 800px)': {
+                marginTop: '.2rem',
+              },
+            }}
+            mt="1.5rem"
+            gridGap="12px"
+          >
             {[
               'fab fa-facebook-square icon change',
               'fab fa-twitter icon change',
@@ -60,7 +82,14 @@ export default function Footer() {
           </Text>
         </Box>
       </Box>
-      <Box flex="0.33">
+      <Box
+        sx={{
+          '@media screen and (max-width: 800px)': {
+            marginTop: '40px',
+          },
+        }}
+        flex="0.33"
+      >
         <Heading
           as="h2"
           color="white"

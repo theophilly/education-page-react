@@ -34,7 +34,19 @@ export default function About() {
     );
   };
   return (
-    <Flex wrap="wrap" padding="0px 100px 100px" id="about">
+    <Flex
+      wrap="wrap"
+      h="auto"
+      sx={{
+        '@media screen and (max-width : 1000px)': {
+          p: '70px 30px',
+          maxW: 'auto',
+          flexDir: 'column',
+        },
+      }}
+      padding="0px 100px 100px"
+      id="about"
+    >
       <Box flex="1">
         <Heading mb={50} color="#353535" as="h2">
           Start your journey to a better life with online practical courses
@@ -62,7 +74,15 @@ export default function About() {
           <Course {...item} />
         ))}
       </Box>
-      <Box padding="80px 180px 80px" flex="0.5">
+      <Box
+        sx={{
+          '@media screen and (max-width : 1000px)': {
+            p: '0px',
+          },
+        }}
+        padding="80px 180px 80px"
+        flex="0.5"
+      >
         <Box padding="20px" border="1px solid grey">
           <Flex direction="column">
             <Heading as="h3"> Sign Up Now</Heading>

@@ -14,7 +14,7 @@ export default function App() {
     <Box>
       <Navbar></Navbar>
       <HomeSlider></HomeSlider>
-      {/* <About></About> */}
+      <About></About>
       <Teachers />
       <Courses />
       <Reviews />

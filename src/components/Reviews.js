@@ -56,10 +56,12 @@ export default function Reviews() {
 
       <Flex align="center" justify="center">
         <Box
-          width="80%"
+          width="95%"
+          display="flex"
+          gridGap="20px"
           sx={{
             '@media screen and (max-width : 1000px)': {
-              width: '500px',
+              width: '300px',
             },
           }}
         >
