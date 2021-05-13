@@ -49,7 +49,7 @@ export default function Navbar() {
       <HStack>
         <FaShapes size={20} />
         <Text fontSize={20} fontFamily="Poppins, sans-serif" fontWeight="500">
-          Fedpoffa
+          Educator
         </Text>
       </HStack>
       <input ref={myRef} className="navMenu" type="checkbox" id="menu" />
